@@ -39,5 +39,12 @@ else的情况也改成了
 还有没有别的地方需要改? 那么就搜一下file, 与func字段是并列的
 有file_callback, 和else的情况是一样的
 
+### patch
+log_trace的调用和它的定义不一致
+```
+#define log_trace(...) log_log(LOG_TRACE, __FILE__, __LINE__, __func__, __VA_ARGS__)
+```
+
+
 ## 怀疑本来就支持文件, 不需要重定向, 怎么才能支持文件?
 
